@@ -23,7 +23,7 @@ int main() {
 	cin>>a;
 	
 	int &b=a;
-	cout<<endl<<"&b=a this means a reference b is created which points to the value at a"<<endl;
+	cout<<endl<<"&b=a this means reference 'b' is created which points to the value at a"<<endl;
 	cout<<endl<<"This means that b is another name for a and what ever changes you make to b will be reflected in a also as b points to value at a"<<endl;
 	cout<<endl<<"However the interesting fact over here is that there is no extra memory allocation over here which is done while creating another variable. hence saving space"<<endl;
 	
