@@ -1,3 +1,2 @@
 # PracticeCPP
-Practice C++
-# Created by Harsh
+Practice C++ - Created by Harsh
