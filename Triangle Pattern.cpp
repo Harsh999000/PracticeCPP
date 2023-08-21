@@ -1,4 +1,5 @@
-/*
+/* Triangle pattern
+
 Print the below pattern('-' is space)
 ----*----
 ---***---
