@@ -1,4 +1,4 @@
-/*
+/* Pattern 2
 
 Print the below Pattern('*' is space)
 
