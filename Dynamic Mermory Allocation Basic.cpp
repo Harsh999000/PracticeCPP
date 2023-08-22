@@ -7,8 +7,8 @@ using namespace std;
 int main() {
 	
 	cout<<"The memory allocation which is done during compile times is stored in stack and is called static memory allocation."<<endl<<endl;
-	cout<<"The memory allocated during run time is called dynamiv memory allocation and is stored in heap."<<endl<<endl;
-	cout<<"Now stack is much smaller than heap. So, in cases where we want to reduce the memory allocation for program we can use heap memory"<<endl<<endl;
+	cout<<"The memory allocated during run time is called dynamic memory allocation and is stored in heap."<<endl<<endl;
+	cout<<"Now heap is much smaller than stack. So, in cases where we want to reduce the memory allocation for program we can use heap memory"<<endl<<endl;
 	cout<<"This also helps in saving memory. As if we create a array in stack we will have a fixed size if we donot use that space it will be watsed."<<endl<<endl;
 	cout<<"If you use heap memory we can add and delete memory allocation as per our requirment."<<endl<<endl;
 	cout<<"We can use 'new' to create a memory allocation in heap for int and we can use a pointer to access the value at that address location."<<endl<<endl;
@@ -26,6 +26,8 @@ int main() {
 	cout<<"The size of the pointer used to access the array created in heap= "<<sizeof(arr2)<<endl;
 	
 	cout<<endl<<"Now normally everything in the stack gets deleted after the program is over but this is not the case with heap and we will have to explicitely delete it using keyword 'delete'"<<endl;
+	cout<<endl<<"This is because the heap memory is not stored in program memory but in the external memory outside of program, so need to be careful to delete this after the use."<<endl;
+	cout<<endl<<"As if not dleted it will not take any space in program but will occupy space in external storage or hard drive."<<endl<<endl;
 	delete [] arr2;
 	
 	return 0;
