@@ -24,9 +24,28 @@ int main() {
 	//under normal array creation we need to give the size of the n first but this is not the case with dynamic memory allocation we can also declare the array before we take n and eveything would work fine
 	cout<<"The size of normal array= "<<sizeof(arr1)<<endl;
 	cout<<"The size of the pointer used to access the array created in heap= "<<sizeof(arr2)<<endl;
-	cout<<"The size of normal array is more as every value is an integer in that array which is of 4 bits so it end up occupying the size of the  array * 4"<<endl;
+	cout<<"The size of normal array is more as every value is an integer in that array which is of 4 bits so it end up occupying the size of the  array * 4"<<endl<<endl;
 	
-	cout<<endl<<"Now normally everything in the stack gets deleted after the program is over but this is not the case with heap and we will have to explicitely delete it using keyword 'delete'"<<endl;
+	cout<<"Please note that we can access the elements of  the arry in heap exactly like normal array. Like arr2[n] to access nth element on the aaray. Enter the elements of the array:"<<endl;
+	
+	
+	
+	for(int i=0;i<n;i++) {
+		cout<<"Enter the value of arr["<<i<<"] = ";
+		cin>>arr2[i];
+	}
+	
+	for(int i=0;i<n;i++) {
+		cout<<"Value of arr["<<i<<"] = ";
+		cout<<arr2[i]<<endl;
+	}
+	
+	cout<<"Also, the name of the array stores the location of the first element in the array and the '*array_name' gives first elemnt of the array. Below is the shown example:"<<endl''
+	cout<<"valueof arr2 = "<<arr2<<endl;
+	cout<<"Value at *arr2 = "<<*arr2<<endl;
+	
+	
+	cout<<endl<<endl<<"Now normally everything in the stack gets deleted after the program is over but this is not the case with heap and we will have to explicitely delete it using keyword 'delete'"<<endl;
 	delete [] arr2;
 	
 	
@@ -38,6 +57,7 @@ int main() {
 	cout<<"So the value of p is an address and *p will take the value save at the address p"<<endl;
 	cout<<"We can use &p to check the adress of p, as now it has been initialised which will store the value as an address"<<endl<<"The below is the example"<<endl;
 	cout<<"Created *p and gave the address of a in p by p=&a"<<endl;
+	cout<<"Please also note that we can not access the heap variable just like normal variable as in the case of aary we need to use * to get the value of the variable"<<endl;
 	
 	int *p = new int;
 	
