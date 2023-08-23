@@ -6,8 +6,12 @@ using namespace std;
 
 unsigned long long int power(int pow, int num) {
 	
-	if(pow == 0 || pow == 1) {
-		return num;
+	if(pow == 0) {
+		// if the below check is not it return 1 on 0 to the power 0
+		if (num = 0)  {
+			return 0;
+		}
+		return 1;
 	}
 	
 	return (num * power( pow-1, num));
