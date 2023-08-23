@@ -72,7 +72,8 @@ int main() {
 	cout<<"Size of &p = "<<sizeof(&p)<<endl;
 	
 	cout<<"To make sure the heap memory is deleted after the closure of program deleting the a by delete p"<<endl;
-	cout<<"delete *p will give an error as we are trying to delete the value. However we just want to delete the meory allocated"<<endl;
+	cout<<"delete *p will give an error as we are trying to delete the value. However we just want to delete the meory allocated which is basically deallocation of memory."<<endl;
+	cout<<"If we do not delete this then this becomes as memory leakage in dynamic memory allocation"<<endl;
 	delete p;
 	
 	cout<<"An important point to be noted is that pounter is stored in stack that is basically the program memory"<<endl;
