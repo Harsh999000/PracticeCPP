@@ -8,7 +8,7 @@ int fact(int a) {
 	
 	//if to check for the end of the loop would have worked with on a==0 but no need of recursion on a==1
 	
-	if(a==0 || a==1) {
+	if(a==0) {
 		return 1;
 	}
 	
