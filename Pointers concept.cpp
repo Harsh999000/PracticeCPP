@@ -98,7 +98,10 @@ int main() {
 	char ch4[4] = "ab";
 	cout<<"Now created ch4[4] and assigned the value ch4[] = 'ab' instead of using single quote use double quotes."<<endl;
 	cout<<"As this causing program to break used like this."<<endl;
-	cout<<ch4;
+	cout<<ch4<<endl<<endl;
+	cout<<"An important concept to note is that a pointer is a data type which is stored in stack and is saved in program memory"<<endl;
+	cout<<"A void * can pass the memory address around which is what a pointer does but it cannot be dereferenced."<<endl;
+	cout<<"Dereferencing means to get at the data contained at the memory location the pointer is pointing at."<<endl;
 	
 	return 0;
 }
