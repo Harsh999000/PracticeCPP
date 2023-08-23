@@ -13,8 +13,8 @@ void ascending(int n) {
 		return ;
 	}
 	
-	ascending(n-1);
-	cout<<n<<" ";
+	ascending(n-1); //calls function for smaller value to be printed first
+	cout<<n<<" "; //  Prints bigger value after smaller value printed br calling fuction above
 }
 
 void descending(int n) {
@@ -26,8 +26,8 @@ void descending(int n) {
 		return ;
 	}
 	
-	cout<<n<<" ";
-	descending(n-1);
+	cout<<n<<" "; // prints bigger first
+	descending(n-1); //  calls function from smaller value to be printed next
 }
 
 int main() {
