@@ -7,8 +7,8 @@ using namespace std;
 int main() {
 	
 	cout<<"The memory allocation which is done during compile times is stored in stack and is called static memory allocation."<<endl<<endl;
-	cout<<"The memory allocated during run time is called dynamic memory allocation and is stored in heap."<<endl<<endl;
-	cout<<"Now heap is much smaller than stack. So, in cases where we want to reduce the memory allocation for program we can use heap memory"<<endl<<endl;
+	cout<<"The memory allocated during run time is called dynamiv memory allocation and is stored in heap."<<endl<<endl;
+	cout<<"Now stack is much smaller than heap. So, in cases where we want to reduce the memory allocation for program we can use heap memory"<<endl<<endl;
 	cout<<"This also helps in saving memory. As if we create a array in stack we will have a fixed size if we donot use that space it will be watsed."<<endl<<endl;
 	cout<<"If you use heap memory we can add and delete memory allocation as per our requirment."<<endl<<endl;
 	cout<<"We can use 'new' to create a memory allocation in heap for int and we can use a pointer to access the value at that address location."<<endl<<endl;
@@ -24,11 +24,46 @@ int main() {
 	//under normal array creation we need to give the size of the n first but this is not the case with dynamic memory allocation we can also declare the array before we take n and eveything would work fine
 	cout<<"The size of normal array= "<<sizeof(arr1)<<endl;
 	cout<<"The size of the pointer used to access the array created in heap= "<<sizeof(arr2)<<endl;
+	cout<<"The size of normal array is more as every value is an integer in that array which is of 4 bits so it end up occupying the size of the  array * 4"<<endl;
 	
 	cout<<endl<<"Now normally everything in the stack gets deleted after the program is over but this is not the case with heap and we will have to explicitely delete it using keyword 'delete'"<<endl;
-	cout<<endl<<"This is because the heap memory is not stored in program memory but in the external memory outside of program, so need to be careful to delete this after the use."<<endl;
-	cout<<endl<<"As if not dleted it will not take any space in program but will occupy space in external storage or hard drive."<<endl<<endl;
 	delete [] arr2;
+	
+	
+	cout<<endl<<"We can not directly declare a variable such as int a = new int, as 'new int' is stored outside of program and must be accessed using the address."<<endl;
+	cout<<"Hence we must declare *p to store the heap memory as heap memory can not be assigned to a variable directly and must be accessed using a pointer."<<endl;
+	cout<<endl<<"Creating * p to store the address of heap memory."<<endl;
+	cout<<"Also, we can not use &p directly as '&' is used to make a reference to the address. And &p will say address of p which is not initialised."<<endl;
+	cout<<"The way to store the address is to create *p which make p store the address. the '*' specifies that an address is stored in variable p"<<endl;
+	cout<<"So the value of p is an address and *p will take the value save at the address p"<<endl;
+	cout<<"We can use &p to check the adress of p, as now it has been initialised which will store the value as an address"<<endl<<"The below is the example"<<endl;
+	cout<<"Created *p and gave the address of a in p by p=&a"<<endl;
+	
+	int *p = new int;
+	
+	cout<<"Enter the value of *p = ";
+	cin>>*p;
+	
+	cout<<"value of p = "<<p<<endl;
+	cout<<"Value of &p = "<<&p<<endl;
+	cout<<"Value of *p ="<<*p<<endl;
+	cout<<"Size of p = "<<sizeof(p)<<endl;
+	cout<<"Size of *p = "<<sizeof(*p)<<endl;
+	cout<<"Size of &p = "<<sizeof(&p)<<endl;
+	
+	cout<<"To make sure the heap memory is deleted after the closure of program deleting the a by delete p"<<endl;
+	cout<<"delete *p will give an error as we are trying to delete the value. However we just want to delete the meory allocated"<<endl;
+	delete p;
+	
+	cout<<"An important point to be noted is that pounter is stored in stack that is basically the program memory"<<endl;
+	cout<<"And the size of the address is stored in 8 bits and hence the size of the array declared using heap is always 8 irrespective of the size of arrary."<<endl;
+	cout<<"This is because we are using only one address to access the array"<<endl;
+	cout<<"When said that the heap will use less memeory is for the cause where the variable size or the array size will exceed the size of an address."<<endl;
+	cout<<"In the case where we used heap to store variable of lesser size than address is a wastage of memory."<<endl;
+	cout<<" This you can see from the size of *p which is an address and which is same as the value of &p"<<endl;
+	cout<<"So *p means p is a variable which will store address. Since address is of 8 bits, the size of p is 8 bits."<<endl;
+	cout<<"And when referring to &p the is the address of p hence this is also of 8 bits."<<endl<<endl;
+	cout<<"Hence the use of heap memory is more useful to save space when delaing with arrary or data types with data size greater than 8 bits"<<endl;
 	
 	return 0;
 }
